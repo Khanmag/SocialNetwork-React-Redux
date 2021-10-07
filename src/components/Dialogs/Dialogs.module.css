@@ -1,0 +1,16 @@
+.dialogsFull {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    min-height: 800px;
+}
+.dialogsList {
+    background-color: #d2a078;
+}
+
+.messages {
+    background-color: #f5dac5;
+}
+.message {
+    padding: 10px;
+}
+

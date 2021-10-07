@@ -1,0 +1,15 @@
+.box {
+    display: block;
+    max-width: 600px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    margin-left: 0;
+    margin-right: 50%;
+}
+.text {
+   margin: 20px;
+}
+.isMy {
+    margin-right: 0;
+    margin-left: 50%;
+}

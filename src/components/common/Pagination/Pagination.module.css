@@ -1,0 +1,12 @@
+.numButtons {
+    font-width: bold;
+}
+.currentPage {
+    color: red;
+}
+.numButtons * {
+    border: 1px solid grey;
+    /*padding: 3px;*/
+    margin: 3px 5px;
+    padding: 0 3px;
+}

@@ -1,0 +1,32 @@
+.nav {
+  grid-area: nav;
+  background-color: 	#FFEBCD;
+}
+.nav div a {
+  color: 	#8B4513	;
+  text-decoration: none;
+}
+.nav div a.active {
+  color: #cb702a;
+}
+.friendsBlock {
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(203, 112, 42, 0.72);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.friendsImg {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.friendsImg img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  margin: 5px auto;
+  object-fit: cover;
+}
