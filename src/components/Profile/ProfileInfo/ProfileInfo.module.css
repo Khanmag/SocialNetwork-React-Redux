@@ -4,3 +4,75 @@
     object-fit: cover;
 
 }
+.profileImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+}
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.linkImage {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin: 3px;
+}
+.noneLink {
+    opacity: 30%;
+}
+.chagingContacts {
+    display: flex;
+    justify-content: left;
+}
+.chagingContacts input {
+    height: 25px;
+    border: none;
+    margin: 3px;
+    border-radius: 3px;
+    width: 400px;
+}
+.chagingContacts img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 30px;
+    width: 30px;
+}
+.contactsBlock {
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: max-content;
+}
+.onOneLineDiv {
+    display: flex;
+}
+.onOneLineDiv input {
+    width: 20px;
+    height: 20px;
+}
+.niceInput input {
+    height: 25px;
+    border: none;
+    margin: 3px;
+    margin-top: 10px;
+    border-radius: 3px;
+    width: 400px;
+}
+.longTextBlock textarea {
+    width: 400px;
+    height: 50px;
+    resize: none;
+    border: none;
+    outline: none;
+}
+.contactsList {
+    background-color: #efefef;
+    padding: 3px;
+    border-radius: 5px;
+}

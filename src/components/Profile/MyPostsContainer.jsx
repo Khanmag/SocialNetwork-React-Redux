@@ -7,7 +7,7 @@ import {connect} from "react-redux";
 
 
 let mapStateToProps = (state) => {
-    let postsList = state.profileData.posts.map(p => <Post message={p.text} likes={p.likes}/>);
+    let postsList = state.profileData.posts.map((p, index) => <Post key={index} message={p.text} likes={p.likes}/>);
     return {
         postsList,
         newPostValue: state.profileData.textForNewPost
