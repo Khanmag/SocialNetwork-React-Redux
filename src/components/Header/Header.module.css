@@ -1,34 +1,28 @@
 .header {
   grid-area: header;
-  background-color: #FFDEAD;
+  background-color: #f1f1f2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*display: grid;*/
-  /*grid-template-rows: 1fr;*/
-  /*grid-template-columns: 1fr 10fr 1fr;*/
-  /*grid-template-areas:*/
-/*"logo empty userInterface";*/
+  height: 60px;
 }
-.header img {
-  /*grid-area: "logo";*/
-  /*width: 70px;*/
-  /*height: 50%;*/
-}
-.empty {
-  line-height: 100%;
-  /*grid-area: "empty";*/
+.logoBlock {
+  height: 60px;
+  width: 60px;
+  background-image: url("https://thumbnailer.mixcloud.com/unsafe/900x900/extaudio/a/1/8/3/28b3-733c-4ec3-ab72-d2ce69f31e7b.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 50px;
 }
 .loginBlock {
-  /*grid-area: "userInterface";*/
-  /*float: right;*/
-  /*height: 100%;*/
-  /*display: flex;*/
-  /*justify-content: space-between;*/
-  /*align-items: center;*/
-  border: 1px solid green;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.authUserBlock {
-  height: 100%;
+.userImage img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  object-fit: cover;
 }

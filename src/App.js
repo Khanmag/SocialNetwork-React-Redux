@@ -28,7 +28,7 @@ class App extends Component {
     }
 
     render() {
-        if (!this.props.initialized) return < Preloader />
+        if (!this.props.initialized) return < Preloader />;
 
         return (
                 <div className="app-wrapper">
@@ -56,18 +56,16 @@ class App extends Component {
     }
 }
 
-let mapStateToProps = (state) => ({initialized: state.app.initialized})
+let mapStateToProps = (state) => ({initialized: state.app.initialized});
 
-let AppContainer = compose(connect(mapStateToProps, {initializedApp}), withRouter)(App)
+let AppContainer = compose(connect(mapStateToProps, {initializedApp}), withRouter)(App);
 
 const MainApp = () => {
-    return <React.StrictMode>
-        <HashRouter basename={process.env.PUBLIC_URL}>
+    return <HashRouter basename={process.env.PUBLIC_URL}>
             <Provider store={store}>
                 <AppContainer />
             </Provider>
         </HashRouter>
-    </React.StrictMode>
-}
+};
 
 export default MainApp

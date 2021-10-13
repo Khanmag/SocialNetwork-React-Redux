@@ -1,5 +1,21 @@
+
+.mainBlock {
+    margin: 10px 0 10px 10px;
+}
 .statusContainer {
     width: 200px;
-    height: 30px;
-    background-color: #d7baa5;
+    height: max-content;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: lightgrey;
+}
+.inputContainer input{
+    width: 200px;
+    height: max-content;
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffffff;
+    outline: none;
+    outline-offset: 0;
 }

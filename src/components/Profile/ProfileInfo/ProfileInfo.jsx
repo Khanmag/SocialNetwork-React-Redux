@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import cl from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
-import ProfileStatusWH from "./ProfileStatusWithHooks";
+import ProfileStatus from "./ProfileStatus";
 import userPhoto from "../../../images/SixWayMan.png"
 import ProfileDescriptionForm from "./ProfileDescriptionForm";
+
 import facebook from "../../../images/facebookIcon.png"
 import website from "../../../images/websiteIcon.png"
 import vk from "../../../images/vkIcon.png"
@@ -13,12 +14,14 @@ import github from "../../../images/githubIcon.png"
 import mainlink from "../../../images/mainlinkIcon.png"
 import youtube from "../../../images/youtubeIcon.png"
 
+import UploadFileOnProfile from "./ProfileUploadPhoto";
+
 const ProfileInfo = React.memo(({isOwner,...props}) => {
 
     let [editModeValue, setEditMode] = useState((false));
     const [addPhotoMode, toggleAddPhotoMode] = useState(false);
-    // useEffect( () => {
-    // }, props.profile);
+    useEffect( () => {
+    }, props.profile);
 
     if (!props.profile) {
         return <Preloader/>
@@ -42,12 +45,14 @@ const ProfileInfo = React.memo(({isOwner,...props}) => {
                     <img className={cl.profileImage} alt={" "} src={props.profile.photos.large || userPhoto}/>
                 </div>
 
-                <div>
+                <div className={cl.inputFileBlock}>
                     {isOwner && addPhotoMode && <input type={'file'} onChange={onMainPhotoSelected} />}
                     {isOwner && !addPhotoMode && <button onClick={() => toggleAddPhotoMode(true)}>change photo</button>}
                 </div>
 
-                < ProfileStatusWH isOwner={isOwner} statusValue={props.status} updateStatus={props.updateStatus}/>
+                {/*<UploadFileOnProfile/>*/}
+
+                < ProfileStatus isOwner={isOwner} statusValue={props.status} updateStatus={props.updateStatus}/>
             </div>
             <div>
                 {editModeValue ? <ProfileDescriptionForm profile={props.profile}

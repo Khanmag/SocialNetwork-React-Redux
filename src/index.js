@@ -4,11 +4,12 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import store from "./redux/redux-store";
 import MainApp from "./App";
+import 'antd/dist/antd.css'
 
 
 let rerenderAll = (state) => {
     ReactDOM.render(<MainApp/>, document.getElementById('root') );
-}
+};
 
 rerenderAll(store.getState());
 
@@ -24,9 +25,7 @@ rerenderAll(store.getState());
 store.subscribe(() => {
     let state = store.getState()
     rerenderAll(state)
-})
-
-// store.rerenderAll()
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
