@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/SocialNetwork-React-Redux/static/css/main.215c749a.chunk.css",
-    "main.js": "/SocialNetwork-React-Redux/static/js/main.9e07b044.chunk.js",
-    "main.js.map": "/SocialNetwork-React-Redux/static/js/main.9e07b044.chunk.js.map",
-    "runtime-main.js": "/SocialNetwork-React-Redux/static/js/runtime-main.ae625529.js",
-    "runtime-main.js.map": "/SocialNetwork-React-Redux/static/js/runtime-main.ae625529.js.map",
+    "main.css": "/SocialNetwork-React-Redux/static/css/main.11e04be8.chunk.css",
+    "main.js": "/SocialNetwork-React-Redux/static/js/main.c1ee2fbc.chunk.js",
+    "main.js.map": "/SocialNetwork-React-Redux/static/js/main.c1ee2fbc.chunk.js.map",
+    "runtime-main.js": "/SocialNetwork-React-Redux/static/js/runtime-main.ea2e68b2.js",
+    "runtime-main.js.map": "/SocialNetwork-React-Redux/static/js/runtime-main.ea2e68b2.js.map",
     "static/css/2.a95be28f.chunk.css": "/SocialNetwork-React-Redux/static/css/2.a95be28f.chunk.css",
-    "static/js/2.6a238106.chunk.js": "/SocialNetwork-React-Redux/static/js/2.6a238106.chunk.js",
-    "static/js/2.6a238106.chunk.js.map": "/SocialNetwork-React-Redux/static/js/2.6a238106.chunk.js.map",
-    "static/css/3.95839224.chunk.css": "/SocialNetwork-React-Redux/static/css/3.95839224.chunk.css",
-    "static/js/3.06d14245.chunk.js": "/SocialNetwork-React-Redux/static/js/3.06d14245.chunk.js",
-    "static/js/3.06d14245.chunk.js.map": "/SocialNetwork-React-Redux/static/js/3.06d14245.chunk.js.map",
-    "static/js/4.017da56f.chunk.js": "/SocialNetwork-React-Redux/static/js/4.017da56f.chunk.js",
-    "static/js/4.017da56f.chunk.js.map": "/SocialNetwork-React-Redux/static/js/4.017da56f.chunk.js.map",
+    "static/js/2.9d18523a.chunk.js": "/SocialNetwork-React-Redux/static/js/2.9d18523a.chunk.js",
+    "static/js/2.9d18523a.chunk.js.map": "/SocialNetwork-React-Redux/static/js/2.9d18523a.chunk.js.map",
+    "static/css/3.ddf1e276.chunk.css": "/SocialNetwork-React-Redux/static/css/3.ddf1e276.chunk.css",
+    "static/js/3.dc33ea97.chunk.js": "/SocialNetwork-React-Redux/static/js/3.dc33ea97.chunk.js",
+    "static/js/3.dc33ea97.chunk.js.map": "/SocialNetwork-React-Redux/static/js/3.dc33ea97.chunk.js.map",
+    "static/js/4.a674891c.chunk.js": "/SocialNetwork-React-Redux/static/js/4.a674891c.chunk.js",
+    "static/js/4.a674891c.chunk.js.map": "/SocialNetwork-React-Redux/static/js/4.a674891c.chunk.js.map",
     "index.html": "/SocialNetwork-React-Redux/index.html",
     "static/css/2.a95be28f.chunk.css.map": "/SocialNetwork-React-Redux/static/css/2.a95be28f.chunk.css.map",
-    "static/css/3.95839224.chunk.css.map": "/SocialNetwork-React-Redux/static/css/3.95839224.chunk.css.map",
-    "static/css/main.215c749a.chunk.css.map": "/SocialNetwork-React-Redux/static/css/main.215c749a.chunk.css.map",
-    "static/js/2.6a238106.chunk.js.LICENSE.txt": "/SocialNetwork-React-Redux/static/js/2.6a238106.chunk.js.LICENSE.txt",
+    "static/css/3.ddf1e276.chunk.css.map": "/SocialNetwork-React-Redux/static/css/3.ddf1e276.chunk.css.map",
+    "static/css/main.11e04be8.chunk.css.map": "/SocialNetwork-React-Redux/static/css/main.11e04be8.chunk.css.map",
+    "static/js/2.9d18523a.chunk.js.LICENSE.txt": "/SocialNetwork-React-Redux/static/js/2.9d18523a.chunk.js.LICENSE.txt",
     "static/media/Radio-1s-200px.efca967e.svg": "/SocialNetwork-React-Redux/static/media/Radio-1s-200px.efca967e.svg",
     "static/media/SixWayMan.a192a173.png": "/SocialNetwork-React-Redux/static/media/SixWayMan.a192a173.png",
     "static/media/facebookIcon.c77b76eb.png": "/SocialNetwork-React-Redux/static/media/facebookIcon.c77b76eb.png",
@@ -31,10 +31,10 @@
     "static/media/youtubeIcon.21833ead.png": "/SocialNetwork-React-Redux/static/media/youtubeIcon.21833ead.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ae625529.js",
+    "static/js/runtime-main.ea2e68b2.js",
     "static/css/2.a95be28f.chunk.css",
-    "static/js/2.6a238106.chunk.js",
-    "static/css/main.215c749a.chunk.css",
-    "static/js/main.9e07b044.chunk.js"
+    "static/js/2.9d18523a.chunk.js",
+    "static/css/main.11e04be8.chunk.css",
+    "static/js/main.c1ee2fbc.chunk.js"
   ]
 }
