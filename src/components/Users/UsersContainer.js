@@ -17,9 +17,9 @@ class UsersAPIComponent extends React.Component {
     }
 
     onChangePages = (pageNumber) => {
-        this.props.getUsers(pageNumber, this.props.pagesSize)
+        this.props.getUsers(pageNumber, this.props.pagesSize);
         this.props.setCurrentPage(pageNumber)
-    }
+    };
 
     render() { return <>
         {this.props.isFetching ? <Preloader/>
@@ -47,18 +47,8 @@ let mapStateToProps = (state) => {
         isFetching: state.usersData.isFetching,
         followingProcess: state.usersData.followingProcess,
     }
-}
+};
 
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => dispatch(followAC(userId)),
-//         unfollow: (userId) => dispatch(unfollowAC(userId)),
-//         setUsers: (users) => dispatch(setUsersAC(users)),
-//         setPagesCount: (count) => dispatch(setPagesCountAC(count)),
-//         setCurrentPage: (current) => dispatch(setCurrentPageAC(current)),
-//         toggleIsFetching: (isFetching) => dispatch(toggleIsFetchingAC(isFetching)),
-//     }
-// }
-let mapDispatch = {follow, unfollow, setPagesCount, setCurrentPage, toggleIsFetching, getUsers: requestUsers}
+let mapDispatch = {follow, unfollow, setPagesCount, setCurrentPage, toggleIsFetching, getUsers: requestUsers};
 
-export const UsersContainer = connect(mapStateToProps, mapDispatch )(UsersAPIComponent)
+export const UsersContainer = connect(mapStateToProps, mapDispatch )(UsersAPIComponent);

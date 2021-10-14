@@ -4,7 +4,10 @@ import NewMessageForm from '../Forms/Message'
 
 const Dialogs = (props) => {
 
-    let onSendMessage = (formData) => props.addNewMessage(formData.messageText)
+    let onSendMessage = (formData) => {
+        props.addNewMessage(formData.messageText);
+        formData.messageText = ""
+    };
 
     return (
         <div className={cl.dialogsFull}>
@@ -20,6 +23,6 @@ const Dialogs = (props) => {
 
         </div>
     )
-}
+};
 
 export default Dialogs

@@ -1,0 +1,10 @@
+.container{
+    width: 1000px;
+}
+.container img {
+    width: 100%;
+}
+.container span {
+    font-size: 30px;
+    margin-left: 150px;
+}

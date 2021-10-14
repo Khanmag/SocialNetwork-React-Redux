@@ -4,13 +4,14 @@
     min-height: 800px;
 }
 .dialogsList {
-    background-color: #d2a078;
+    background-color: #efefef;
 }
 
 .messages {
-    background-color: #f5dac5;
+    background-color: #ffffff;
 }
 .message {
     padding: 10px;
 }
+
 

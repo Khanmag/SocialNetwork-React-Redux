@@ -1,17 +1,24 @@
 
 
 .dialog {
-    margin-left: 30px;
-    color: #aa602b;
     text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+    color: #000c17;
+}
+.dialog:hover {
+    color: #00364d;
 }
 .active {
-    color: white;
-    text-shadow: 2px 2px 0 black;
+    color: grey;
+    font-weight: 700;
+    border-left: 2px solid #54caff;
 }
 .container {
-    height: 30px;
+    height: 50px;
     display: flex;
     justify-content: start;
     align-items: center;
+    border-bottom: 1px solid white;
+
 }

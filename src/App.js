@@ -11,9 +11,9 @@ import {compose} from "redux";
 import {initializedApp} from "./redux/appReducer";
 import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
+import NotMountYet from "./components/common/NotMountYet";
 
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
-// import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 class App extends Component {
     catchAllUnhandledErrors = (promiseRejectionEvent) => {
@@ -46,9 +46,9 @@ class App extends Component {
                             <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
                             <Route path='/users' render={() => <UsersContainer/>}/>
                             <Route path='/login' render={() => <Login/>}/>
+                            <Route path='/music' render={() => <NotMountYet/>}/>
+                            <Route path='/setting' render={() => <NotMountYet/>}/>
                             <Route path='*' render={() => <Login/>}/>
-                            {/*<Route path='/music'/>*/}
-                            {/*<Route path='/setting'/>*/}
                         </Switch>
                     </div>
                 </div>

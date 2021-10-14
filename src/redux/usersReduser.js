@@ -11,7 +11,7 @@ let TOGGLE_FOLLOWING_PROCESS = 'users/TOGGLE_FOLLOWING_PROCESS'
 
 let initialState = {
     users: [],
-    pagesSize: 5,
+    pagesSize: 24,
     pagesCount: 0,
     currentPage: 1,
     isFetching: false,
