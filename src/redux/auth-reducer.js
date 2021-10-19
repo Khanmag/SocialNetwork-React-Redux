@@ -1,6 +1,7 @@
 import React from 'react'
 import {authAPI, securityAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
+import {setDefaultPhotoOnHeader, setUserPhotoOnHeader} from "./profileReducer";
 
 const setUserDataAction = 'auth/SET-USER-DATA';
 const setCaptchaAC = 'auth/SET_CAPTCHA'
@@ -43,7 +44,7 @@ export const login = (email, password, rememberMe, captcha) => {
     return async (dispatch) => {
         let response = await authAPI.login(email, password, rememberMe, captcha);
         if (response.data.resultCode === 0) {
-            dispatch(getAuthUserData())
+            dispatch(getAuthUserData());
         } else {
             if (response.data.resultCode === 10) {
                 dispatch(getCaptcha())
@@ -57,12 +58,13 @@ export const login = (email, password, rememberMe, captcha) => {
 export const logout = () => async (dispatch) => {
     let response = await authAPI.logout();
     if (response.data.resultCode === 0) {
-        dispatch(setAuthUserData(null, null, null, false))
+        dispatch(setAuthUserData(null, null, null, false));
+        dispatch(setDefaultPhotoOnHeader())
     }
 };
 export const getCaptcha = () => async (dispatch) => {
     const response = await securityAPI.getCaptchaURL();
-    const URL = response.data.url
+    const URL = response.data.url;
     dispatch(setCaptcha(URL))
 };
 

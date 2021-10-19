@@ -9,13 +9,27 @@
     border-radius: 6px;
     background-color: lightgrey;
 }
-.inputContainer input{
+.inputContainer textarea{
     width: 200px;
     height: max-content;
     padding: 5px;
+    padding-bottom: 30px;
+    overflow: hidden;
     border: none;
     border-radius: 6px;
     background-color: #ffffff;
     outline: none;
     outline-offset: 0;
+    resize: none;
+}
+.inputContainer button {
+    width: 40px;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    line-height: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightgrey;
+    color: white;
 }

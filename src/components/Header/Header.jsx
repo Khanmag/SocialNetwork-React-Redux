@@ -13,7 +13,7 @@ const Header = (props) => {
                         : <button><NavLink to={'/login'}>Log In</NavLink></button>}
                 </div>
                 <div className={cl.userImage}>
-                    <img src={props.profile ? props.profile.photos.small : samirai}/>
+                    <img src={props.image}/>
                 </div>
             </div>
         </header>

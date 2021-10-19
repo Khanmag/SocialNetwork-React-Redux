@@ -11,7 +11,6 @@ class ProfileContainer extends React.Component {
         let userId = this.props.match.params.userId;
         if (!userId) {
             userId = this.props.authUserId;
-            //Push guest profile here if i want
             if (!userId) this.props.history.push('/login')
         }
         this.props.getUserProfile(userId);
@@ -27,7 +26,7 @@ class ProfileContainer extends React.Component {
     }
 
     render() {
-        return <Profile {...this.props} profile={this.props.profile} saveProfile={this.props.saveProfile}
+        return <Profile {...this.props} profile={this.isTheGuest ? this.props.guestProfile : this.props.profile} saveProfile={this.props.saveProfile}
                         isOwner={!this.props.match.params.userId} savePhoto={this.props.savePhoto}
                         status={this.props.status} updateStatus={this.props.updateStatus}/>
     }
@@ -37,7 +36,8 @@ let mapStateToProps = (state) => ({
     profile: state.profileData.profile,
     isAuth: state.auth.isAuth,
     status: state.profileData.status,
-    authUserId: state.auth.userId
+    authUserId: state.auth.userId,
+    guestProfile: state.profileData.guestProfile,
 });
 
 export default compose(

@@ -24,6 +24,8 @@
 }
 .noneLink {
     opacity: 30%;
+    pointer-events: none;
+    cursor: default;
 }
 .chagingContacts {
     display: flex;

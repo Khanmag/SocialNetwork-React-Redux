@@ -1,9 +1,14 @@
 import {profileAPI, usersAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
+import defaultHeaderPhoto from "../images/catWithFiveFoot.jpg"
 
 let setUserProfileAction = 'profileData/SET-USER-PROFILE';
 let setStatusAction = 'profileData/SET-STATUS';
-let savePhotoSuccessAC = 'profileData/SAVE_PHOTO'
+let savePhotoSuccessAC = 'profileData/SAVE_PHOTO';
+let setUserPhotoOnHeaderAC = 'profileData/SET_USER_PHOTO_ON_HEADER';
+let setDefaultPhotoOnHeaderAC = 'profileData/SET_DEFAULT_PHOTO_ON_HEADER';
+
+
 
 let initialState = {
     posts: [
@@ -19,6 +24,7 @@ let initialState = {
         }
     ],
     profile: null,
+    myPhoto: defaultHeaderPhoto,
     status: '',
 };
 
@@ -47,21 +53,40 @@ const profileReducer = (state = initialState, action) => {
         case savePhotoSuccessAC:
             return {
                 ...state,
-                profile: {...state.profile, photos: {...action.file}}
+                profile: {...state.profile, photos: {...action.photos}}
+            };
+        case setUserPhotoOnHeaderAC:
+            return  {
+                ...state,
+                myPhoto: action.photo
+            };
+        case setDefaultPhotoOnHeaderAC:
+            return {
+                state,
+                myPhoto: defaultHeaderPhoto,
             };
         default:
             return state;
     }
 };
 
-export const setUserProfile = (profile) => ({type: setUserProfileAction, profile})
+export const setUserProfile = (profile) => ({type: setUserProfileAction, profile});
 export const setStatus = (status) => ({type: setStatusAction, status});
-export const savePhotoSuccess = (photos) => ({type: savePhotoSuccessAC, photos})
+export const savePhotoSuccess = (photos) => ({type: savePhotoSuccessAC, photos});
+export const setUserPhotoOnHeader = (photo) => ({type: setUserPhotoOnHeaderAC, photo});
+export const setDefaultPhotoOnHeader = () => ({type: setDefaultPhotoOnHeaderAC});
 
 export const getUserProfile = (userId) => {
     return async (dispatch) => {
-        let data = await usersAPI.getProfile(userId)
-        dispatch(setUserProfile(data))
+        let data = await usersAPI.getProfile(userId);
+        dispatch(setUserProfile(data));
+    }
+};
+
+export const getUserPhoto = (userId) => {
+    return async (dispatch) => {
+        let data = await usersAPI.getProfile(userId);
+        dispatch(setUserPhotoOnHeader(data.photos.small))
     }
 };
 
@@ -77,7 +102,7 @@ export const updateStatus = (status) => async (dispatch) => {
 };
 export const savePhoto = (photo) => async (dispatch) => {
     let response = await profileAPI.updatePhoto(photo);
-    if (response.data.resultCode === 0) dispatch(savePhotoSuccess(photo))
+    if (response.data.resultCode === 0) dispatch(savePhotoSuccess(response.data.data.photos));
 };
 export const saveProfile = (formData) => async (dispatch, getState) => {
     let id = getState().auth.userId;

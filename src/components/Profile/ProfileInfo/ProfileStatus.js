@@ -27,7 +27,8 @@ const ProfileStatus = React.memo(({statusValue, updateStatus, isOwner}) => {
             </div>}
 
             {editModeValue && <div onBlur={deactivateEditMode} className={cl.inputContainer}>
-                <input autoFocus={true} value={status} onChange={onStatusChange}/>
+                <textarea autoFocus={true} value={status} onChange={onStatusChange}/>
+                <button onClick={deactivateEditMode}>save</button>
             </div>
             }
         </div>

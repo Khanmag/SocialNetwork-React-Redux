@@ -16,9 +16,9 @@ import NotMountYet from "./components/common/NotMountYet";
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
 
 class App extends Component {
-    catchAllUnhandledErrors = (promiseRejectionEvent) => {
-        alert(promiseRejectionEvent)
-    };
+    // catchAllUnhandledErrors = (promiseRejectionEvent) => {
+    //     alert(promiseRejectionEvent)
+    // };
     componentDidMount() {
         this.props.initializedApp();
         window.addEventListener("unhandledrejection",this.catchAllUnhandledErrors )

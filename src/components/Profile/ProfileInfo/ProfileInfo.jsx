@@ -37,7 +37,8 @@ const ProfileInfo = React.memo(({isOwner,...props}) => {
             setEditMode(false)
         })
     };
-
+    // console.log("rerender");
+    // console.log(props.profile);
     return (
         <div className={cl.mainContainer}>
             <div>
@@ -99,8 +100,8 @@ export const Contacts = ({linkPhotos, contacts}) => {
     return <div className={cl.contactsList}>
         {Object.keys(contacts).map((item, index) => {
             let linksStyle = contacts[item] ? cl.linkImage : (cl.linkImage + " " + cl.noneLink);
-            return <a className={linksStyle}
-                      style={{backgroundImage: `url("${linkPhotos[index]}")`}} target={"_blank"} href={contacts[item]}></a>
+            return <a className={linksStyle} title={contacts[item]}
+                      style={{backgroundImage: `url("${linkPhotos[index]}")`}} target={"_blank"} href={contacts[item]}/>
         })}
     </div>
 };
